@@ -10,18 +10,31 @@ import Hidden from '@material-ui/core/Hidden';
 import Divider from '@material-ui/core/Divider';
 import MenuIcon from '@material-ui/icons/Menu';
 import Icon from "@material-ui/core/Icon";
-
-const drawerWidth = 240;
+import About from "./About.jsx";
+import Contact from "./Contact.jsx";
+import ContentArea from "./ContentArea.jsx";
+const drawerWidth = 385;
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    height: 430,
     zIndex: 1,
+    minHeight: 500,
     overflow: 'hidden',
     position: 'relative',
     display: 'flex',
     width: '100%',
+  },
+  mainRoot:{
+    flexGrow: 1,
+    flexDirection: "column",
+    zIndex: 1,
+    minHeight: 500,
+    overflow: 'hidden',
+    position: 'relative',
+    display: 'flex',
+    width: '100%',
+    paddingRight: 16
   },
   appBar: {
     position: 'absolute',
@@ -32,6 +45,9 @@ const styles = theme => ({
   },
   flex: {
       flex : 1
+  },
+  placeHolder:{
+      minHeight:80
   },
   navIconHide: {
     [theme.breakpoints.up('md')]: {
@@ -65,10 +81,13 @@ class Main extends React.Component{
             mobileOpen : !this.state.mobileOpen
         });
     }
-
+    handleLinkClick(address){
+        window.open(address);
+    }
 
     render(){
         const { classes, theme } = this.props;
+        const drawer = <div><About /><Divider /><Contact /></div>
         return(
             <div className={classes.root}>
                 <AppBar className={classes.appBar} position="fixed">
@@ -84,11 +103,11 @@ class Main extends React.Component{
                         <Typography variant="title" color="inherit" className={classes.flex} noWrap>
                         Text Here
                         </Typography>
-                        <IconButton>
+                        <IconButton onClick={() => this.handleLinkClick("https://github.com/jebadirad")}>
                             <Icon className="fab fa-github"></Icon>
                         </IconButton>
                         <IconButton>
-                            <Icon className="fab fa-linkedin-in"></Icon> 
+                            <Icon className="fab fa-linkedin-in" onClick={() => this.handleLinkClick("https://www.linkedin.com/in/jondavid-ebadirad")}></Icon> 
                         </IconButton>
                     </Toolbar>
                 </AppBar>
@@ -104,6 +123,7 @@ class Main extends React.Component{
                         keepMounted: true, // Better open performance on mobile.
                         }}
                     >
+                    {drawer}
                     </Drawer>
                 </Hidden>
                 <Hidden smDown implementation="css">
@@ -114,10 +134,12 @@ class Main extends React.Component{
                     paper: classes.drawerPaper,
                     }}
                 >
+                {drawer}
                 </Drawer>
                 </Hidden>
-                <main>
-                    
+                <main className={classes.mainRoot}>
+                    <Toolbar className={classes.placeHolder} />
+                    <ContentArea />
                 </main>
             </div>
             );
