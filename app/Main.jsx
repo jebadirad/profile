@@ -34,10 +34,15 @@ const styles = theme => ({
     position: 'relative',
     display: 'flex',
     width: '100%',
-    paddingRight: 16
+    paddingRight: 16,
+    paddingLeft: 24,
+    marginLeft: 0,
+    [theme.breakpoints.up('md')]: {
+        marginLeft: drawerWidth,
+      },
   },
   appBar: {
-    position: 'absolute',
+    position: 'fixed',
     marginLeft: drawerWidth,
     [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -58,7 +63,7 @@ const styles = theme => ({
   drawerPaper: {
     width: drawerWidth,
     [theme.breakpoints.up('md')]: {
-      position: 'relative',
+      position: 'fixed',
     },
   },
   content: {
