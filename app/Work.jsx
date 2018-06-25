@@ -14,15 +14,15 @@ export default class Work extends React.Component{
                         description: "Test Description",
                         challenges : [
                             {
-                                description: "Challenge 1",
-                                resolution: "resolution 1"
+                                description: "",
+                                resolution: ""
                             },
                             {
-                                description: "Challenge 2",
-                                resolution: "resolution 2"
+                                description: "",
+                                resolution: ""
                             }
                         ],
-                        overview: "Test OverView"
+                        overview: ""
                     },
                     {
                         name : "Giving Day 2018",
@@ -113,7 +113,29 @@ export default class Work extends React.Component{
                         ],
                         overview: ""
                     },
-
+                    {
+                        name : "Misc Web Development",
+                        description: "",
+                        challenges : [
+                            {
+                                description: "HR Forms",
+                                resolution: ""
+                            },
+                            {
+                                description: "Employee Payroll Deduction",
+                                resolution: ""
+                            },
+                            {
+                                description: "PBS File Importer Tool",
+                                resolution: ""
+                            },
+                            {
+                                description: "Donation Fallback Site",
+                                resolution: ""
+                            },
+                        ],
+                        overview: ""
+                    },
 
                 ]
             },
