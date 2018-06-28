@@ -54,7 +54,7 @@ class WorkItem extends React.Component{
     render(){
         const {classes, theme} = this.props;
         var projectChallenges = this.props.project.challenges.map(function(challenge){
-            return <div><Typography variant="body1">{challenge.description}</Typography><Typography variant="body1">{challenge.resolution}</Typography></div>
+            return <div><Typography variant="body1" gutterBottom>{challenge.description}</Typography><Typography variant="body2" paragraph>{challenge.resolution}</Typography></div>
         });
         return(<Card>
             <CardHeader
@@ -63,8 +63,8 @@ class WorkItem extends React.Component{
             >
             </CardHeader>
             <CardContent>
-                <Typography variant="body1" paragraph>{this.props.project.description}</Typography>
-                <Typography variant="body1" paragraph>{this.props.project.overview}</Typography>
+                <Typography variant="body2" paragraph>{this.props.project.description}</Typography>
+                <Typography variant="body2" paragraph>{this.props.project.overview}</Typography>
             </CardContent>
             <CardActions>
                 <IconButton
@@ -80,7 +80,7 @@ class WorkItem extends React.Component{
             </CardActions>
             <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                    <Typography paragraph variant="body2">
+                    <Typography paragraph variant="subheading">
                         Challenges:
                     </Typography>
                     {projectChallenges}
