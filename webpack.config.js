@@ -36,4 +36,5 @@ module.exports = {
     plugins : [
 
     ], 
+    watch : true
 }

@@ -106,7 +106,7 @@ class Main extends React.Component{
                         <MenuIcon />
                         </IconButton>
                         <Typography variant="title" color="inherit" className={classes.flex} noWrap>
-                        Text Here
+                        Resume
                         </Typography>
                         <IconButton onClick={() => this.handleLinkClick("https://github.com/jebadirad")}>
                             <Icon className="fab fa-github"></Icon>

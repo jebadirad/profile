@@ -63,8 +63,8 @@ class WorkItem extends React.Component{
             >
             </CardHeader>
             <CardContent>
-                <Typography variant="body1">{this.props.project.description}</Typography>
-                <Typography variant="body1">{this.props.project.overview}</Typography>
+                <Typography variant="body1" paragraph>{this.props.project.description}</Typography>
+                <Typography variant="body1" paragraph>{this.props.project.overview}</Typography>
             </CardContent>
             <CardActions>
                 <IconButton
@@ -73,7 +73,7 @@ class WorkItem extends React.Component{
                 })}
                 onClick={this.onCardClick}
                 aria-expanded={this.state.expanded}
-                aria-label="Show more"
+                aria-label="Learn more"
                 >
                     <ExpandMoreIcon />
                 </IconButton>

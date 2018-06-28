@@ -11,7 +11,7 @@ export default class Work extends React.Component{
                 projects: [
                     {
                         name : "DeviLink",
-                        description: "Test Description",
+                        description: "Company Intranet redesign and platform change.  Upgraded from SharePoint 2013 to SharePoint Online. Intranet needed to be fully customizable and engaging for users. Intranet also needed a different content structure to enhance users' ability to find documents and information. Company also wanted more automated features to be placed on the intranet to reduce paper work. Intranet needed notifications for users and notifications that impacted the entire organization.",
                         challenges : [
                             {
                                 description: "",
@@ -22,7 +22,7 @@ export default class Work extends React.Component{
                                 resolution: ""
                             }
                         ],
-                        overview: ""
+                        overview: "A React web application was built into the master page, which provided the foundation to allow users to add small apps from a list to their home page.  Users were able to reorganize, add, and remove apps whenever they wanted.  The content restructure placed information related to a specific piece of functionality opposed to sorting information by department; with an added search box on the homepage to allow users to quickly find what they needed based on content. A custom-built directory was added that synchronized with active directory nightly. Common forms were migrated into miniature applications that allowed users the ability to access forms directly from the homepage. Achievements based on company events, comments and \"likes\" on news and pictures allowed users to engage with the website, and customization of the navigation menu and homepage allowed users to each have a fresh look on what they valued most in the company.  "
                     },
                     {
                         name : "Giving Day 2018",
@@ -173,11 +173,11 @@ export default class Work extends React.Component{
         return(
         <Grid container spacing={16}>
             <Grid item xs={12}>
-                <Typography variant="display2">{this.state.ASUEP.name}</Typography>
+                <Typography variant="display1">{this.state.ASUEP.name}</Typography>
             </Grid>
             {asuepProjects}
             <Grid item xs={12}>
-                <Typography variant="display2">{this.state.GDIT.name}</Typography>
+                <Typography variant="display1">{this.state.GDIT.name}</Typography>
             </Grid>
             {GDITprojects}
         </Grid>);

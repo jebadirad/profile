@@ -13,7 +13,12 @@ class About extends React.Component{
         return(<div className={classes.avatarWrapper}>
             <Avatar className={classes.avatar}>JE</Avatar>
             <Typography className={classes.caption} gutterBottom variant="caption" align="center">Web Application Developer</Typography>
-            <Typography className={classes.aboutMe} gutterBottom variant="body1">Some about me textSome about me textSome about me textSome about me textSome about me text</Typography>
+            <Typography className={classes.aboutMe} gutterBottom variant="body2" align="left">Javascript addict, React lover, Material Design enthusiast.
+             I love automation and innovation. </Typography>
+             <Typography className={classes.aboutMe} gutterBottom variant="body2"  align="left">I enjoy learning about new technologies and diving into APIs. 
+             My ideal work place environment encourages innovation, personal growth, curiosity and technological exploration to expanded and enhance internal and external user experience.</Typography>
+             <Typography className={classes.aboutMe} variant="body2" gutterBottom  align="left">Test Driven Development in combination with user stories, UMLs and system diagrams leads to better software and managable workloads!</Typography>
+             <Typography variant="caption" align="center">Work smarter, not harder.</Typography>
         </div>);
     }
 }
@@ -34,9 +39,9 @@ const styles = theme => ({
        marginTop: 8
     },
     aboutMe: {
-        marginTop:8,
-        marginLeft: 8,
-        marginRight: 8
+        marginTop:16,
+        marginLeft: 16,
+        marginRight: 16
 
     }
 });
